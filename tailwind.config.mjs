@@ -8,9 +8,9 @@ export default {
   ],
   theme: {
   	extend: {
-		backgroundImage: {
-			'login': "url('/3398381.jpg')",
-		  },
+  		backgroundImage: {
+  			login: "url('/3398381.jpg')"
+  		},
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
