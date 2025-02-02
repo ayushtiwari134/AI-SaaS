@@ -19,7 +19,7 @@ const Sidenav = () => {
      {
       'id':2,
       'name':'Create',
-      'path': '/create',
+      'path': '/dashboard/create-new',
       'icon': BadgePlus
      },
      {
@@ -38,7 +38,7 @@ const Sidenav = () => {
   const currentPath = usePathname()
 
   return (
-    <div className='w-64 flex flex-col gap-2 p-4 border-r-2 h-screen'>
+    <div className='w-64 flex flex-col gap-2 p-4 border-r border-teal-600 h-screen'>
       {
         menuOptions.map((option)=>{
           const Icon = option.icon

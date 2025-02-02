@@ -4,16 +4,16 @@ import Sidenav from './_components/Sidenav'
 
 function layout({children}) {
   return (
-    <div>
-        <div className='hidden md:block h-screen bg-white fixed mt-[65px] w-[10%]'>
+    <div id='namememememememme'>
+        <div className='hidden md:block h-screen fixed bg-white mt-[65px] w-64'>
         <Sidenav/>
         </div>
-      <div>
-        <Navbar/>
-        <div className='md:ml-64'>
-            {children}
+        <div>
+          <Navbar/>
+          <div className='md:ml-64 h-full'>
+              {children}
+          </div>
         </div>
-      </div>
     </div>
   )
 }
