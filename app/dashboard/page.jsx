@@ -4,7 +4,6 @@
 import React from 'react'
 import { Button } from '../components/ui/button'
 import Link from 'next/link';
-
 const page = () => {
   const [videos, setVideos] = React.useState([])
 

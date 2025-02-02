@@ -20,8 +20,8 @@ const CustomLoader = ({loading}) => {
     <div>
       <AlertDialog open={loading}>
         <AlertDialogContent>
-        <AlertDialogTitle>
-            <Image src={'/loader.gif'} width={100} height={100} alt='loader'/>
+        <AlertDialogTitle className='flex flex-col items-center gap-4'>
+            <Image src={'/loading.gif'} width={100} height={100} alt='loader'/>
             <p>Loading</p>
         </AlertDialogTitle>
         </AlertDialogContent>

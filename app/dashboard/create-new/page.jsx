@@ -9,6 +9,8 @@ import CustomLoader from './_components/CustomLoader'
 
 
 const page = () => {
+    const [videoScript, setVideoScript] = React.useState({});
+
     const [loading, setLoading] = React.useState(false)
 
     //AI PART
@@ -16,9 +18,11 @@ const page = () => {
 
         const prompt = `Write a script to generate ${formData.duration} video on topic : ${formData.topic} along with AI Image prompt in ${formData.style} format for each scene and give me the result in JSON format with ImagePrompt and ContentText as field`
         setLoading(true);
-        const res = await axios.post('/api/get-video-script',{prompt:prompt}).then(resp=>{console.log(resp.data)});
+        const res = await axios.post('/api/get-video-script',{prompt:prompt}).then(resp=>{
+            console.log(resp.data.response.candidates[0].content.parts[0].text);
+            setVideoScript(resp.data.response.candidates[0].content.parts[0].text);
+        });
         setLoading(false);
-        
     }
 
     const [formData, setFormData] = React.useState(
